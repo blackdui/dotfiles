@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec env GLFW_IM_MODULE=ibus kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -176,7 +176,7 @@ exec --no-startup-id xcompmgr -FCf -nc -t -5 &
 # i3bar网络管理图标
 exec --no-startup-id nm-applet
 # 启动输入法-i3bar输入法图标
-exec --no-startup-id fcitx
+exec --no-startup-id fcitx5 &
 # 配置显示器
 exec --no-startup-id xrandr --output LVDS-1 --mode 1024x768
 # i3bar音量图标
@@ -184,5 +184,5 @@ exec --no-startup-id volumeicon
 # 启动电源管理
 exec --no-startup-id mate-power-manager
 # 设置背景图片
-#exec --no-startup-id feh --bg-fill /home/blackdui/dotfiles/images/desktop.png
+exec --no-startup-id feh --bg-fill /home/blackdui/dotfiles/images/desktop.png
 # Atuostart end

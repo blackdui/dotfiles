@@ -18,6 +18,7 @@ inoremap jk <esc>
 
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
+nnoremap <leader>Q :q!<cr>
 nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>ee :e %:h<cr>
 inoremap <C-u> <ESC>mmgUiw`ma
