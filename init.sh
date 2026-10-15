@@ -4,7 +4,8 @@ set -e
 #essential packages{{{1
 sudo apt update
 sudo apt install -y curl vim stow git ripgrep
-sudo apt install -y i3 kitty lightdm ttf-wqy-zenhei
+sudo apt install -y i3 kitty lightdm 
+sudo apt install ttf-wqy-zenhei fonts-noto-color-emoji
 sudo apt install -y xcompmgr fcitx5 fcitx5-rime feh \
                 network-manager-gnome volumeicon-alsa pulseaudio \
                 pavucontrol xorg lxappearance rofi
