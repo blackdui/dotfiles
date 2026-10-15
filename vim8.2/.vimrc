@@ -6,7 +6,7 @@ set wildmenu
 set expandtab
 set cursorline
 set modeline
-"set termguicolors
+set termguicolors
 set colorcolumn=80
 let &t_ut=''
 set wildmode=list,full
