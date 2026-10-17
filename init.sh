@@ -25,10 +25,6 @@ zsh() {
         echo "export QT_IM_MODULE=fcitx" >> ~/.zshrc
         echo "export GLFW_IM_MODULE=ibus" >> ~/.zshrc
         sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
-        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-        git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
 }
 #}}}
 
@@ -83,6 +79,15 @@ tmux() {
 }
 #}}}1
 
+#10.zshplugins{{{1
+zshplugins() {
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+        git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+}
+
+#}}}1
+
 #stow emacs27 -t ~/.emacs.d
 
 packages()
@@ -91,5 +96,6 @@ kitty()
 tmux()
 nerdfonts()
 zsh()
+# zshplugins()
 # fzf()
 # vim()
