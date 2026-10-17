@@ -169,7 +169,22 @@ bindsym $mod+e exec pcmanfm
 # finds out, if available)
 bar {
         status_command i3status
+        position top
+        font pango:monospace 12
+        colors {
+        background         #002b36
+        statusline         #eee8d5
+        separator          #93a1a1
+
+        # focused_workspace  border bg text
+        focused_workspace   #2aa198 #2aa198 #002b36
+        active_workspace    #586e75 #073642 #93a1a1
+        inactive_workspace  #073642 #073642 #93a1a1
+        urgent_workspace    #cb4b16 #cb4b16 #fdf6e3
+        binding_mode        #b58900 #b58900 #002b36
+    }
 }
+for_window [class="^.*"] border pixel 2 # 把所有的窗口边框设为 2 像素
 
 # Autostart begin
 exec --no-startup-id xcompmgr -FCf -nc -t -5 &

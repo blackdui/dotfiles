@@ -20,10 +20,6 @@ zsh() {
         sudo apt install -y zsh
         chsh -s /bin/zsh
         stow zsh
-        echo "export XMODIFIERS=@im=fcitx" >> ~/.zshrc
-        echo "export GTK_IM_MODULE=fcitx" >> ~/.zshrc
-        echo "export QT_IM_MODULE=fcitx" >> ~/.zshrc
-        echo "export GLFW_IM_MODULE=ibus" >> ~/.zshrc
         sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
 }
 #}}}
