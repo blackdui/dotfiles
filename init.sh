@@ -26,10 +26,9 @@ zsh() {
 
 #4.i3wm {{{1
 i3wm() {
-        stow i3 -t ~/.config/i3
         sudo apt install -y apt-get install xserver-xorg-input-evdev xserver-xorg-input-kbd xserver-xorg-input-mouse xserver-xorg-video-intel
         sudo apt install -y i3 sddm
-        sudo apt install -y xcompmgr feh \
+        sudo apt install -y xcompmgr feh pcmanfm\
                 network-manager-gnome volumeicon-alsa pulseaudio \
                 pavucontrol xorg lxappearance rofi mate-power-manager
         }
@@ -64,7 +63,6 @@ nerdfonts() {
 #8.kitty{{{1
 kitty() {
         sudo apt install -y kitty
-        stow kitty/ -t ~/.config/kitty/
 }
 #}}}1
 
@@ -84,14 +82,19 @@ zshplugins() {
 
 #}}}1
 
-#stow emacs27 -t ~/.emacs.d
 
-packages()
-i3wm()
-kitty()
-tmux()
-nerdfonts()
-zsh()
-# zshplugins()
-# fzf()
-# vim()
+main() {
+        packages()
+        stow config -t ~/.config
+        i3wm()
+        kitty()
+        tmux()
+        nerdfonts()
+        zsh()
+        # zshplugins()
+        # fzf()
+        # vim()
+        #stow emacs27 -t ~/.emacs.d
+}
+
+main "$@"
